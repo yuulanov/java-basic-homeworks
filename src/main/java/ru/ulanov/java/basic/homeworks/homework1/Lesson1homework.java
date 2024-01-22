@@ -1,8 +1,5 @@
 package ru.ulanov.java.basic.homeworks.homework1;
 
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
 public class Lesson1homework {
 
     public static void main(String[] args) {
@@ -11,11 +8,7 @@ public class Lesson1homework {
         selectColor();
         compareNumbers();
         addOrSubtractAndPrint(8, 5, false);
-
-
-
     }
-
     public static void greetings() {
         System.out.println("Hello\nWorld\nfrom\nJava");
     }
@@ -31,7 +24,6 @@ public class Lesson1homework {
             System.out.println("Сумма отрицательная");
         }
     }
-
     public static void selectColor() {
         int data = -5;
         if (data <= 10) {
@@ -44,7 +36,6 @@ public class Lesson1homework {
             System.out.println("Зеленый");
         }
     }
-
     public static void compareNumbers() {
         int a = 1;
         int b = 7;
@@ -55,7 +46,6 @@ public class Lesson1homework {
             System.out.println("a<=b");
         }
     }
-
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
         if (increment) {
             System.out.println(initValue + delta);
