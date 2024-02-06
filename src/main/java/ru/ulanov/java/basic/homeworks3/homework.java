@@ -7,14 +7,11 @@ public class homework {
         sQuare(5);
         diagonalZero(4);
         findMax(3);
-        sumSecondElements(3);
-
+        sumSecondElements(1);
     }
-
-
-    // Реализовать метод sumOfPositiveElements(..), принимающий в качестве аргумента
-    // целочисленный двумерный массив, метод должен посчитать и вернуть сумму всех элементов
-    // массива, которые больше 0;
+    /** Реализовать метод sumOfPositiveElements(..), принимающий в качестве аргумента
+     целочисленный двумерный массив, метод должен посчитать и вернуть сумму всех элементов
+     массива, которые больше 0*/
     public static void sumOfPositiveElement(int a) {
         int[][] array = new int[a][a];
         for (int i = 0; i < array.length; i++) {
@@ -38,9 +35,8 @@ public class homework {
             System.out.println();
         }
     }
-
-    //Реализовать метод, который принимает в качестве аргумента int size и печатает в консоль
-    // квадрат из символов * со сторонами соответствующей длины;
+    /**Реализовать метод, который принимает в качестве аргумента int size и печатает в консоль
+    квадрат из символов * со сторонами соответствующей длины;*/
     public static void sQuare(int size) {
         int[][] arr = new int[size][size];
         for (int i = 0; i < arr.length; i++) {
@@ -50,9 +46,8 @@ public class homework {
             System.out.println();
         }
     }
-
-   //Реализовать метод, принимающий в качестве аргумента двумерный целочисленный массив,
-   // и зануляющий его диагональные элементы (можете выбрать любую из диагоналей, или занулить обе);
+   /**Реализовать метод, принимающий в качестве аргумента двумерный целочисленный массив,
+   и зануляющий его диагональные элементы (можете выбрать любую из диагоналей, или занулить обе)*/
     public static void diagonalZero(int size) {
 
         int[][] arr = new int[size][size];
@@ -67,8 +62,7 @@ public class homework {
             System.out.println();
         }
     }
-
-    //Реализовать метод findMax(int[][] array) который должен найти и вернуть максимальный элемент массива;
+    /**Реализовать метод findMax(int[][] array) который должен найти и вернуть максимальный элемент массива*/
     public static void findMax(int a) {
         int[][] array = new int[a][a];
         for (int i = 0; i < array.length; i++) {
@@ -88,9 +82,8 @@ public class homework {
         }
         System.out.println(max);
     }
-
-    //Реализуйте метод, который считает сумму элементов второй строки двумерного массива,
-    // если второй строки не существует, то в качестве результата необходимо вернуть -1
+    /**Реализуйте метод, который считает сумму элементов второй строки двумерного массива,
+    если второй строки не существует, то в качестве результата необходимо вернуть -1*/
     public static void sumSecondElements(int a) {
         int[][] array = new int[a][a];
         for (int i = 0; i < array.length; i++) {
@@ -106,8 +99,8 @@ public class homework {
                 if (i == 1) {
                     sum += array[i][j];
                 }
-                if (sum == 0) {
-                    System.out.println("-1");
+                if (array.length <= 1) {
+                    sum = -1;
                 }
             }
         }
