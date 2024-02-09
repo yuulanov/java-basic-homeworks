@@ -30,7 +30,10 @@ public class Main {
         box1.putObject("Планшет");
         box1.putObject("Планшет");
         box1.putObject("Планшет");
-        //box1.close();
+        box1.putObject("Планшет");
+        box1.close();
+        box1.pickUpObject("планшет");
+        box1.open();
         box1.pickUpObject("планшет");
 
     }

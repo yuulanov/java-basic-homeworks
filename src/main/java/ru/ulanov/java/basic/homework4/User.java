@@ -33,7 +33,7 @@ public class User {
         this.email = email;
     }
     public void info() {
-        System.out.println("ФИО: " + surname + " " + name + " " + middleName + " " + yearOfBirth + " " + email);
+        System.out.println("ФИО: " + surname + " " + name + " " + middleName + "\n" + "Год рождения: " + yearOfBirth + "\n" + "email: " + email);
     }
 
 }
