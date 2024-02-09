@@ -16,20 +16,21 @@ public class Main {
                 new User("Zaycev", "Ivan", "Ivanovich", 1986, "1@mail"),
                 new User("Morev", "Ivan", "Ivanovich", 1996, "1@mail"),
         };
-        //for (int i = 0; i < users.length; i++) {
-        //if ([i][3] > 1983) {
-        //users[i].info();
+        for (int i = 0; i < users.length; i++) {
+            if (2024 - (users[i].getYearOfBirth()) > 40) {
+                users[i].info();
+            }
+        }
 
-        //}
-
-        Box box1 = new Box(20, "Зеленая");
+        Box box1 = new Box(2, "Зеленая");
         box1.info();
         box1.setColour("Красная");
         box1.info();
         box1.open();
         box1.putObject("Планшет");
-        box1.close();
-        box1.open();
+        box1.putObject("Планшет");
+        box1.putObject("Планшет");
+        //box1.close();
         box1.pickUpObject("планшет");
 
     }
