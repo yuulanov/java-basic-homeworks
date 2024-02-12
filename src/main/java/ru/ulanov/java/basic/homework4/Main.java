@@ -21,7 +21,6 @@ public class Main {
                 users[i].info();
             }
         }
-
         Box box1 = new Box(2, "Зеленая");
         box1.info();
         box1.setColour("Красная");
@@ -35,7 +34,5 @@ public class Main {
         box1.pickUpObject("планшет");
         box1.open();
         box1.pickUpObject("планшет");
-
     }
-
 }
