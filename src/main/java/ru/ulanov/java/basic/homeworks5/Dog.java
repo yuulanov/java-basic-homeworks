@@ -7,7 +7,7 @@ public class Dog extends Animal {
     @Override
     public void swim(int distance) {
         System.out.println(getName() + " потратил " + distance / getSwimSpeed() + " сек. " + "чтобы проплыть " + distance + " метров");
-        if (endurance - distance * 2 <= 0) {
+        if (getEndurance() - distance * 2 <= 0) {
             endurance = -1;
         } else {
             endurance -= distance * 2;

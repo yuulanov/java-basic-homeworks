@@ -4,7 +4,7 @@ public class Animal {
     private final String name;
     private final int runSpeed;
     private final int swimSpeed;
-    public int endurance;
+    int endurance;
 
     public Animal(String name, int runSpeed, int swimSpeed, int endurance) {
         this.name = name;
