@@ -1,0 +1,29 @@
+package ru.ulanov.java.basic.homework6;
+
+public class Main {
+    public static void main(String[] args) {
+        Cat cat1 = new Cat("Murzik", 100);
+        Plate plate = new Plate(50, 50);
+
+        cat1.info();
+        plate.plateInfo();
+        cat1.toEat(50);
+        cat1.info();
+        plate.plateInfo();
+        plate.addFood(10);
+        plate.plateInfo();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
