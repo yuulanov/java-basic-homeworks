@@ -34,11 +34,4 @@ public class Cat {
 
         }
     }
-
-    public static void feedCats(Cat[] cats, Plate plate) {
-        for (int i = 0; i < cats.length; i++) {
-            cats[i].toEat(plate);
-            cats[i].info();
-        }
-    }
 }
