@@ -1,11 +1,9 @@
 package ru.ulanov.java.basic.homework6;
 
-import static ru.ulanov.java.basic.homework6.Eats.*;
-
 public class Cat {
     private String name;
     private int appetite;
-    public Boolean satiety = false;
+    public Boolean satiety;
 
     public Cat(String name, int appetite) {
         this.name = name;
@@ -28,17 +26,19 @@ public class Cat {
         System.out.println("У кота " + name + " аппетит " + appetite + " и насыщенность " + satiety);
     }
 
-    public void toEat(public int eats) {
+    public void toEat(Plate plate) {
+        if (!satiety) {
+            if (plate.decreaseFoodInPlate(appetite)) {
+                satiety = true;
+            }
 
-        appetite -= eats;
-        if (appetite <= 0) {
-            satiety = true;
-            System.out.println("Кот поел досыта");
-        } else {
-            satiety = false;
-            System.out.println("Кот поел, но еще голоден");
         }
-
     }
 
+    public static void feedCats(Cat[] cats, Plate plate) {
+        for (int i = 0; i < cats.length; i++) {
+            cats[i].toEat(plate);
+            cats[i].info();
+        }
+    }
 }

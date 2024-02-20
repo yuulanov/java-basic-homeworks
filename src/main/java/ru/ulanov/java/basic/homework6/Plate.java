@@ -3,47 +3,31 @@ package ru.ulanov.java.basic.homework6;
 import java.sql.SQLOutput;
 
 public class Plate {
-    private  int size;
-    private int quantityMeal;
-    public int eats;
+    private int maxFoodQuant;
+    private int currentFoodQuant;
 
-    public Plate(int eats) {
-        this.eats = eats;
-    }
-
-    public Plate(int size, int quantityMeal) {
-        this.size = size;
-        this.quantityMeal = quantityMeal;
+    public Plate(int maxFoodQuant) {
+        this.maxFoodQuant = maxFoodQuant;
+        this.currentFoodQuant = currentFoodQuant;
     }
 
-    public int getSize() {
-        return size;
-    }
 
-    public int getQuantityMeal() {
-        return quantityMeal;
-    }
-
-    public void setQuantityMeal(int quantityMeal) {
-        this.quantityMeal = quantityMeal;
-    }
-    public void plateInfo() {
-        System.out.println("В тарелке " + quantityMeal + " еды");
-    }
-    public void decreaseFood(){
-        quantityMeal -= eats;
-        System.out.println("В тарелке " + quantityMeal + " еды");
-
-    }
-    public void addFood (int pieces){
-        pieces += quantityMeal;
-        if (quantityMeal >= size) {
-            quantityMeal = size;
-            System.out.println("Тарелка полная");
+    public void addFoodInPlate(int foodQuant) {
+        if (this.currentFoodQuant + foodQuant < this.maxFoodQuant) {
+            this.currentFoodQuant += foodQuant;
+        } else {
+            this.currentFoodQuant = this.maxFoodQuant;
         }
-        else quantityMeal += pieces;
-        System.out.println("В тарелке " + quantityMeal + " еды");
+    }
 
+    public boolean decreaseFoodInPlate(int eatQuant) {
+        if ((this.currentFoodQuant - eatQuant) >= 0) {
+            this.currentFoodQuant -= eatQuant;
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
+
