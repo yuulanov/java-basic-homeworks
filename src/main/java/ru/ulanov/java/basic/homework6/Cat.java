@@ -3,7 +3,7 @@ package ru.ulanov.java.basic.homework6;
 public class Cat {
     private String name;
     private int appetite;
-    private Boolean satiety;
+    private boolean satiety;
 
     public Cat(String name, int appetite) {
         this.name = name;

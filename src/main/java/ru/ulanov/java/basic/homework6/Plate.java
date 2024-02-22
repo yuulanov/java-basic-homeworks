@@ -8,7 +8,7 @@ public class Plate {
 
     public Plate(int maxFoodQuant) {
         this.maxFoodQuant = maxFoodQuant;
-        this.currentFoodQuant = currentFoodQuant;
+        this.currentFoodQuant = maxFoodQuant;
     }
 
 
