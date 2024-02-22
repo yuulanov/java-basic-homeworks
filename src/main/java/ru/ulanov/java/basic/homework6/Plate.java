@@ -28,6 +28,10 @@ public class Plate {
             return false;
         }
     }
-
+    public void info() {
+        System.out.println("В тарелке осталось " + this.currentFoodQuant + " еды");
+    }
 }
+
+
 
