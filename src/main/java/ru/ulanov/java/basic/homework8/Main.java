@@ -18,8 +18,12 @@ public class Main {
 
         for (int i = 0; i < arrayNum.length; i++) {
             for (int j = 0; j < arrayNum.length; j++) {
-                //arrayNum[i][j] = Integer.parseInt(arrayStr[i][j]);
                 arrayNum[i][j] = (int) (Math.random() * 4);
+                for (char ch : str.toCharArray()) {
+                    if (!Character.isDigit(ch)) {
+                        throw new AppArrayDataException("Ошибка " + i + ", " + j);
+                    }
+                }
 
 
                 System.out.print(arrayNum[i][j] + " ");
