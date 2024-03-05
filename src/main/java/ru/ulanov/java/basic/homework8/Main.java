@@ -19,13 +19,12 @@ public class Main {
         for (int i = 0; i < arrayNum.length; i++) {
             for (int j = 0; j < arrayNum.length; j++) {
                 arrayNum[i][j] = (int) (Math.random() * 4);
+                String str = String.valueOf(arrayNum[i][j]);
                 for (char ch : str.toCharArray()) {
                     if (!Character.isDigit(ch)) {
                         throw new AppArrayDataException("Ошибка " + i + ", " + j);
                     }
                 }
-
-
                 System.out.print(arrayNum[i][j] + " ");
             }
             System.out.println();
@@ -34,8 +33,6 @@ public class Main {
         for (int i = 0; i < arrayNum.length; i++) {
             for (int j = 0; j < arrayNum.length; j++) {
                 String str = String.valueOf(arrayNum[i][j]);
-
-
                 sumArr += arrayNum[i][j];
             }
         }
